@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<section class="post">
+    <header class="post-header">
+        <h1 class="post-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+        <p class="post-meta">
+            Category: <a class="post-category post-category-design" href="{{ page.category }}">{{ page.category }}</a>
+            <i class="fa fa-tags"></i>
+
+            {% for tag in page.tags %}
+            <a class="post-tag post-tag-design" href="{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        </p>
+    </header>
+
+    <div class="post-description">
+        <p>{{ content }}</p>
+    </div>
+</section>
+
