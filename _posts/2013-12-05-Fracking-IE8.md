@@ -13,7 +13,7 @@ Just solved a problem which causes me to hate IE8 even more.  If you set a gradi
 </p>
 <!-- more -->
 
-{% gist 7823815 %}
+{% gist 7823815 frackingIE8-1 %}
 
 {% highlight css %}
 .header-gradient {
@@ -45,6 +45,9 @@ but no, not with IE8. It looks like
 <p>
 Turns out the solution is to overwrite the full gradient settings like so.
 </p>
+
+{% gist 7823815 frackingIE8-2 %}
+
 {% highlight html %}
 .header-gradient {
     background: rgb(254,254,254);
