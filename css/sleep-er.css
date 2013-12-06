@@ -192,8 +192,9 @@ a:focus {
     color: #333333;
 }
 
-pre, code {
+pre, code, gist {
     font-family: Menlo,Consolas,"Courier New",Courier,"Liberation Mono",monospace;
+    font-size: 12px
 }
 
 @media (max-width: 767px) {
