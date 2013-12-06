@@ -52,8 +52,20 @@ a:focus {
 }
 
 .header {
-    margin: 50% 2em 0;
+    margin: 35% 2em 0;
     text-align: right;
+}
+
+.sidebar .about {
+    margin-bottom: 2em;
+}
+
+.sidebar .contact {
+    text-align: center;
+}
+
+.sidebar .contact a:hover {
+    color: #ffaa00;
 }
 
 .brand-title,
@@ -199,6 +211,11 @@ pre, code, .gist {
 
 .gist table{
     width: 100%;
+}
+
+.pagination .next,
+.pagination .previous {
+    color: #ffaa00;
 }
 
 @media (max-width: 767px) {
