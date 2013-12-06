@@ -117,6 +117,10 @@ a:focus {
     padding: 2em 3em 0;
 }
 
+.posts {
+    width: 75%;
+}
+
 .post {
     padding-bottom: 2em;
     border-bottom: 2px solid #ffaa00;
@@ -235,10 +239,17 @@ pre, code, .gist {
     #layout {
         padding: 0;
     }
+
+    .posts {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
     .content {
         padding: 2em 1em 0;
+    }
+    .posts {
+        width: 100%;
     }
 }
