@@ -47,6 +47,7 @@ a:focus {
     margin-left: -25%;
     color: #dddddd;
     background-color: #333333;
+    background-image: url(/images/sidebar.png);
 
 }
 
@@ -108,6 +109,13 @@ a:focus {
     padding-bottom: 2em;
     border-bottom: 2px solid #ffaa00;
 }
+.post-header-article h1 {
+    font-size: 3.5em;
+}
+.post-header-article {
+    padding-bottom: 2em;
+    border-bottom: 2px solid #ffaa00;
+}
 .post-title {
     font-size: 2em;
     color: #dddddd;
@@ -164,6 +172,28 @@ a:focus {
 .footer .pure-menu a:hover,
 .footer .pure-menu a:focus {
     background: none;
+}
+
+.color1 {
+    color: #DDDDDD;
+}
+.color2 {
+    color: #ffaa00;
+}
+
+.more:hover {
+    color: #ffaa00;
+}
+
+.highlight {
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: #cccccc;
+    color: #333333;
+}
+
+pre, code {
+    font-family: Menlo,Consolas,"Courier New",Courier,"Liberation Mono",monospace;
 }
 
 @media (max-width: 767px) {

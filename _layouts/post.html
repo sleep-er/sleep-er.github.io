@@ -3,14 +3,16 @@ layout: default
 ---
 
 <section class="post">
-    <header class="post-header">
+    <header class="post-header-article">
+        <img width="48" height="48" src="{{ site.url }}/images/me-avatar.jpg" alt="David Makin's avatar" class="post-avatar">
         <h1 class="post-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
         <p class="post-meta">
-            Category: <a class="post-category post-category-design" href="{{ page.category }}">{{ page.category }}</a>
+            <i class="fa fa-calendar"></i> {{ page.date | date: "%e %B %Y" }} |
+            Category: <a class="post-category post-category-design" href="/category/{{ page.category }}">{{ page.category }}</a> |
             <i class="fa fa-tags"></i>
 
             {% for tag in page.tags %}
-            <a class="post-tag post-tag-design" href="{{ tag }}">{{ tag }}</a>
+            <a class="post-tag post-tag-design" href="/tag/{{ tag }}">{{ tag }}</a>
             {% endfor %}
         </p>
     </header>

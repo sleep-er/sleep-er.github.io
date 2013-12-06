@@ -9,22 +9,25 @@ layout: default
 <!-- A wrapper for all the blog posts -->
 <div class="posts">
     <h1 class="content-subhead">Recent musings</h1>
-    {% for post in site.posts %}
+    {% for post in site.posts offset: 0 limit: 15 %}
     <section class="post">
         <header class="post-header">
+            <img width="48" height="48" src="{{ site.url }}/images/me-avatar.jpg" alt="David Makin's avatar" class="post-avatar">
             <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
             <p class="post-meta">
-                Category: <a class="post-category post-category-design" href="{{ post.category }}">{{ post.category }}</a>
+                <i class="fa fa-calendar"></i> {{ post.date | date: "%e %B %Y" }} |
+                Category: <a class="post-category post-category-design" href="{{ post.category }}">{{ post.category }}</a> |
                 <i class="fa fa-tags"></i>
 
                 {% for tag in post.tags %}
-                <a class="post-tag post-tag-design" href="{{ tag }}">{{ tag }}</a>
+                <a class="post-tag post-tag-design" href="/tag/{{ tag }}">{{ tag }}</a>
                 {% endfor %}
             </p>
         </header>
 
         <div class="post-description">
-            <p>{{ post.content | split: '<!-- more -->' | first }} <a class="more" href="{{ post.url }}">more...</a></p>
+            <p>{{ post.content | split: '<!-- more -->' | first }} <a class="more" href="{{ post.url }}">read more <i class="fa fa-chevron-circle-right"></i></i></a></p>
         </div>
     </section>
     {% endfor %}

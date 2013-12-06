@@ -2,3 +2,4 @@ auto: true
 markdown: rdiscount
 pygments: true
 excerpt_separator: "<!-- more -->"
+permalink:     /blog/:year/:month/:day/:title/

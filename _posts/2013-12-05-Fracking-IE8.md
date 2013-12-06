@@ -2,18 +2,20 @@
 layout: post
 title: Fracking IE8 not inheriting background correctly.
 category: Coding
-tags: IE PIE
+tags: IE CSS
 published: true
 summary: The CSS background element does not properly inherit if you use PIE.htc.
 image: post_three.jpg
 ---
 <p>
-Just solved a problem which causes me to hate IE8 even more.  If you set a gradient on a div in css and then later on override it to just be a plain color
-it doesn't work.
+Just solved a problem which causes me to hate IE8 even more.  If you set a gradient on a section via css and <a href="http://css3pie.com/" title="PIE.htc">PIE.htc</a>
+ and later on override it to be a solid color it doesn't work.
 </p>
 <!-- more -->
 
-{% highlight html %}
+{% gist 7823815 %}
+
+{% highlight css %}
 .header-gradient {
     background: rgb(39,50,132);
     background: -moz-linear-gradient(top,rgba(39,50,132) 0%,rgba(39,50,132) 100%);
@@ -27,17 +29,18 @@ it doesn't work.
 }
 
 .header-gradient {
-    background: rgb(254,254,254);
+    background: rgb(39,50,132);
 }
 {% endhighlight %}
 
 <p>
 You would expect that the background would end up looking like this
 </p>
-
+<img src="/images/blue-gradient.png">
 <p>
-but no it looks like
+but no, not with IE8. It looks like
 </p>
+<img src="/images/grey-gradient.png">
 
 <p>
 Turns out the solution is to overwrite the full gradient settings like so.
@@ -67,4 +70,6 @@ Turns out the solution is to overwrite the full gradient settings like so.
     behavior: url(/assets/css/PIE.htc);
 }
 {% endhighlight %}
+<p>
+There is probably an simpler way that overwriting the whole section but that works.
 </p>
