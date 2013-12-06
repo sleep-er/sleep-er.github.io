@@ -192,9 +192,13 @@ a:focus {
     color: #333333;
 }
 
-pre, code, gist {
+pre, code, .gist {
     font-family: Menlo,Consolas,"Courier New",Courier,"Liberation Mono",monospace;
     font-size: 12px
+}
+
+.gist table{
+    width: 100%;
 }
 
 @media (max-width: 767px) {
