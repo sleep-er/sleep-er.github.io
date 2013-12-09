@@ -1,6 +1,6 @@
 body {
     background: #444444;
-    font: 14px/21px "Expletus Sans", sans-serif;
+    font: 90% "Expletus Sans", sans-serif;
     color: #dddddd;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -130,6 +130,10 @@ a:focus {
 .post {
     padding-bottom: 2em;
     border-bottom: 2px solid #ffaa00;
+}
+.post-description  p:first-child:first-letter {
+    font-size: 2.5em;
+    color: #cccccc
 }
 .post-header-article h1 {
     font-size: 3.5em;

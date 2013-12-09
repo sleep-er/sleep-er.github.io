@@ -25,14 +25,14 @@ layout: default
         </header>
 
         <div class="post-description">
-            <p>{{ post.content | split: '<!-- more -->' | first }} <a class="more" href="{{ post.url }}">read more <i class="fa fa-chevron-circle-right"></i></i></a></p>
+            <p>{{ post.content | split: '<!-- more -->' | first }} <a class="more" href="{{ post.url }}">read full article <i class="fa fa-chevron-circle-right"></i></i></a></p>
         </div>
     </section>
     {% endfor %}
 </div>
 
 <!-- Pagination links -->
-        <br>
+<br>
 <div class="pagination">
     {% if paginator.previous_page && 1 != paginator.previous_page %}
     {% if 1 == paginator.previous_page %}
