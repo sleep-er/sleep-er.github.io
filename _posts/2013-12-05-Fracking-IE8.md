@@ -5,8 +5,6 @@ category: Coding
 tags: IE CSS
 published: true
 summary: The CSS background element does not properly inherit if you use PIE.htc.
-image: post_three.jpg
-name: moo
 ---
 <p>
 Just solved a problem which causes me to hate IE8 even more.  If you set a gradient on a section via css and <a href="http://css3pie.com/" title="PIE.htc">PIE.htc</a>
@@ -21,7 +19,7 @@ You would expect that the background would end up looking like this
 </p>
 <img src="/images/blue-gradient.png">
 <p>
-but no, not with IE8. It looks like this. Which might be a little hard to see but is a gentle gradient from almost white to a light grey
+but no, not with IE8. It looks like this.
 </p>
 <img src="/images/grey-gradient.png">
 

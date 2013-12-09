@@ -26,11 +26,13 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
-    color: #dddddd;
+    color: #FFaa00;
+    transition: all 0.25s ease 0s;
 }
 a:hover,
 a:focus {
     text-decoration: underline;
+    color: #FF9900;
 }
 
 /* LAYOUT CSS */
@@ -62,6 +64,10 @@ a:focus {
 
 .sidebar .contact {
     text-align: center;
+}
+
+.sidebar .about a{
+    color: #DDDDDD;
 }
 
 .sidebar .contact a:hover {
@@ -137,6 +143,14 @@ a:focus {
     color: #dddddd;
     margin-bottom: 0.2em;
 }
+h1.post-title a,
+h2.post-title a,
+h3.post-title a,
+h4.post-title a,
+h5.post-title a
+{
+    color: #dddddd;
+}
 .post-avatar {
     border-radius: 50px;
     float: right;
@@ -197,9 +211,7 @@ a:focus {
     color: #ffaa00;
 }
 
-.more:hover {
-    color: #ffaa00;
-}
+
 
 .highlight {
     border: 1px solid grey;
