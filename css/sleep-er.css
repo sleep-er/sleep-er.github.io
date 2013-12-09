@@ -131,10 +131,15 @@ a:focus {
     width: 100%;
 }
 
-.post {
-    padding-bottom: 2em;
+.post-description {
+    padding-bottom: 1em;
     border-bottom: 2px solid #ffaa00;
 }
+
+#disqus_thread {
+    padding-top: 2em;
+}
+
 .post-description  p:first-child:first-letter {
     font-family: "Expletus Sans",sans-serif;
     font-size: 2.5em;
