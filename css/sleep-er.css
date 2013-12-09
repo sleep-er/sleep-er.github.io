@@ -123,8 +123,12 @@ a:focus {
     padding: 2em 3em 0;
 }
 
-.posts {
+.posts,
+.post {
     width: 75%;
+}
+.posts .post {
+    width: 100%;
 }
 
 .post {
