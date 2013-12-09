@@ -132,8 +132,15 @@ a:focus {
     border-bottom: 2px solid #ffaa00;
 }
 .post-description  p:first-child:first-letter {
+    font-family: "Expletus Sans",sans-serif;
     font-size: 2.5em;
-    color: #cccccc
+    color: #cccccc;
+    border-radius: 5px;
+    float: left;
+    height: 64px;
+    line-height: 70px;
+    margin-right: 0px;
+    padding: 0px;
 }
 .post-header-article h1 {
     font-size: 3.5em;
