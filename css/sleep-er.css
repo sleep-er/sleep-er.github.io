@@ -260,6 +260,11 @@ pre, code, .gist {
         margin: 0;
     }
 
+    .sidebar .image-me {
+        width: 61px;
+        height: 90px;
+    }
+
     .header {
         text-align: center;
         top: auto;
