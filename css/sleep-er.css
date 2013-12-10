@@ -271,7 +271,9 @@ pre, code, .gist {
     #layout {
         padding: 0;
     }
-
+    .post-header-article h1 {
+        font-size: 2.5em;
+    }
     .posts, .post {
         width: 100%;
     }
@@ -280,6 +282,12 @@ pre, code, .gist {
 @media (max-width: 480px) {
     .content {
         padding: 2em 1em 0;
+    }
+    .not-mobile {
+        display: none;
+    }
+    .post-header-article h1 {
+        font-size: 2em;
     }
     /*.posts, .post {*/
         /*width: 100%;*/
