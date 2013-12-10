@@ -74,6 +74,10 @@ a:focus {
     color: #ffaa00;
 }
 
+.sidebar .fa-lg {
+    line-height: 1.3333em;
+}
+
 .brand-title,
 .brand-tagline {
     margin: 0;
