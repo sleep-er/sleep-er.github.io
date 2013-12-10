@@ -30,8 +30,6 @@ Just solved a problem which causes me to hate IE8 even more.  If you set a gradi
 }
 {% endhighlight %}
 
-{% gist 7823815 frackingIE8-1.css %}
-
 <p>
 You would expect that the background would end up looking like this
 </p>
