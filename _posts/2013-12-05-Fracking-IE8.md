@@ -54,12 +54,12 @@ Turns out the solution is to overwrite the full gradient settings like so.
 {% highlight css %}
 .header-gradient {
     background: rgb(39,50,132);
-    background: -moz-linear-gradient(top,rgba(39,50,132) 0%,rgba(39,50,132) 100%);
-    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(39,50,132)),color-stop(100%,rgba(39,50,132)));
-    background: -webkit-linear-gradient(top,rgba(39,50,132) 0%,rgba(39,50,132) 100%);
-    background: -o-linear-gradient(top,rgba(39,50,132) 0%,rgba(39,50,132) 100%);
-    background: -ms-linear-gradient(top,rgba(39,50,132) 0%,rgba(39,50,132) 100%);
-    background: linear-gradient(top,rgba(39,50,132) 0%,rgba(39,50,132) 100%);
+    background: -moz-linear-gradient(top,rgba(39,50,132) 100%,rgba(39,50,132) 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(100%,rgba(39,50,132)),color-stop(100%,rgba(39,50,132)));
+    background: -webkit-linear-gradient(top,rgba(39,50,132) 100%,rgba(39,50,132) 100%);
+    background: -o-linear-gradient(top,rgba(39,50,132) 100%,rgba(39,50,132) 100%);
+    background: -ms-linear-gradient(top,rgba(39,50,132) 100%,rgba(39,50,132) 100%);
+    background: linear-gradient(top,rgba(39,50,132) 100%,rgba(39,50,132) 100%);
     -pie-background: linear-gradient(rgba(39,50,132), rgba(39,50,132));
     behavior: url(/assets/css/PIE.htc);
 }
