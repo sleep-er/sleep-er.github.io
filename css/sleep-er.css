@@ -102,6 +102,7 @@ a:focus {
     color: #dddddd;
     margin-top: 1em;
 }
+.nav-item a.pure-menu-selected,
 .nav-item a:hover,
 .nav-item a:focus {
     border: 3px solid #fff;
@@ -230,8 +231,6 @@ h5.post-title a
 .color2 {
     color: #ffaa00;
 }
-
-
 
 .highlight {
     border: 1px solid grey;
