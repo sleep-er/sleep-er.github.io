@@ -142,7 +142,7 @@ a:focus {
 
 .post-description  p:first-child:first-letter {
     font-family: "Expletus Sans",sans-serif;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #cccccc;
     border-radius: 5px;
     float: left;
@@ -272,7 +272,7 @@ pre, code, .gist {
         padding: 0;
     }
 
-    .posts {
+    .posts, .post {
         width: 100%;
     }
 }
@@ -281,7 +281,7 @@ pre, code, .gist {
     .content {
         padding: 2em 1em 0;
     }
-    .posts {
-        width: 100%;
-    }
+    /*.posts, .post {*/
+        /*width: 100%;*/
+    /*}*/
 }
