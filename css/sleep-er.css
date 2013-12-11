@@ -1,6 +1,5 @@
 body {
     background: #444444;
-    font: 90% "Expletus Sans", sans-serif;
     color: #dddddd;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -11,13 +10,20 @@ body {
     left: 0;
     z-index: -100
 }
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    font: 1em "Expletus Sans", sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Expletus Sans", sans-serif;
     font-weight: normal;
     color: #dddddd;
 }
-
+h1 {
+    font-size: 2.5em;
+}
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -35,9 +41,19 @@ a:focus {
     color: #FF9900;
 }
 
+#header-banner {
+    background-color: #FFAA00;
+    color: #333333;
+    margin-top: 0;
+    padding: 2em 3em 0;
+}
+#header-banner h1 {
+    color: #333333;
+    margin: 0px;
+}
 /* LAYOUT CSS */
 #layout {
-    padding-left: 25%; /* "left col (nav + list)" width */
+    padding-left: 25%;  "left col (nav + list)" width
     position: relative;
 }
 
@@ -51,6 +67,10 @@ a:focus {
     background-color: #333333;
     background-image: url(/images/sidebar.png);
 
+}
+
+.sidebar h1 {
+    font-size: 1.5em;
 }
 
 .header {
@@ -128,14 +148,6 @@ a:focus {
     padding: 2em 3em 0;
 }
 
-.posts,
-.post {
-    width: 75%;
-}
-.posts .post {
-    width: 100%;
-}
-
 .post-description {
     padding-bottom: 1em;
     border-bottom: 2px solid #ffaa00;
@@ -157,7 +169,7 @@ a:focus {
     padding: 0px;
 }
 .post-header-article h1 {
-    font-size: 3.5em;
+    font-size: 3em;
 }
 .post-header-article {
     padding-bottom: 2em;
@@ -229,6 +241,10 @@ h5.post-title a
     background: none;
 }
 
+#intro {
+    padding-bottom: 2em;
+}
+
 .color1 {
     color: #DDDDDD;
 }
@@ -282,9 +298,6 @@ pre, code, .gist {
     .post-header-article h1 {
         font-size: 2.5em;
     }
-    .posts, .post {
-        width: 100%;
-    }
 }
 
 @media (max-width: 480px) {
@@ -297,7 +310,4 @@ pre, code, .gist {
     .post-header-article h1 {
         font-size: 2em;
     }
-    /*.posts, .post {*/
-        /*width: 100%;*/
-    /*}*/
 }

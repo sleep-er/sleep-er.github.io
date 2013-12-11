@@ -4,7 +4,7 @@
 
 <body>
 <div class="pure-g-r" id="layout">
-    <div class="sidebar pure-u">
+    <div class="sidebar pure-u-1-4">
         <header class="header">
             <div class="about pure-g-r">
                 <div class="pure-u-1-2 not-mobile">
@@ -31,21 +31,22 @@
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
-                    <a class="pure-button {% if '/' == page.url %}pure-menu-selected {% endif %}" href="/">Home</a>
+                        <a class="pure-button {% if '/' == page.url %}pure-menu-selected {% endif %}" href="/">Home</a>
                     </li>
-                    {% for node in site.pages %}
-                    {% if node.title != nil and node.url != '/' %}
-                    {% capture nodediff %}{{ page.url | remove:node.url }}{% endcapture %}
-                    <li class="nav-item"><a class="pure-button {% if nodediff != page.url %}pure-menu-selected {% endif %}" href="{{ node.url }}">{{ node.title }}</a></li>
-                    {% endif %}
-                    {% endfor %}
+                    <li class="nav-item">
+                        <a class="pure-button {% if '/about/' == page.url %}pure-menu-selected {% endif %}" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button {% if '/blog/' == page.url %}pure-menu-selected {% endif %}" href="/blog">Blog</a>
+                    </li>
                 </ul>
             </nav>
 
         </header>
     </div>
 
-    <div class="pure-u-1">
+    <div class="pure-u-3-4">
+
         <div class="content">
 
             {{ content }}

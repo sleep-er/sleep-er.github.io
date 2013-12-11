@@ -1,4 +1,4 @@
 sleep-er.github.io
 ==================
 
-Personal site
+Personal site using Jekyll and hosted by GitHub
