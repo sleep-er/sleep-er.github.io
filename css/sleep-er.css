@@ -120,17 +120,18 @@ a:focus {
     *display: inline;
     zoom: 1;
 }
-.nav-item a {
+.nav-item a.pure-button {
     background: transparent;
-    border: 3px solid rgba(221, 221, 221, 0.60);
     color: #dddddd;
     margin-top: 1em;
+    padding: 0.5em 0.5em;
+    transition: all 0.25s ease 0s;
 }
 .nav-item a.pure-menu-selected,
 .nav-item a:hover,
 .nav-item a:focus {
-    border: 3px solid #fff;
-    color: #fff;
+    background-color: #dddddd;
+    color: #333333;
     text-decoration: none;
 }
 
@@ -273,6 +274,23 @@ pre, code, .gist {
     color: #ffaa00;
 }
 
+.contact {
+    transition: all 0.25s ease 0s;
+}
+.contact:hover{
+    color: #ffaa00;
+}
+.contact .fa{
+    margin: 0.5em 0;
+}
+.contact h3 {
+    display: inline;
+    margin: 0;
+}
+.contact p {
+    display: inline;
+    margin-left: 1em;
+}
 @media (max-width: 767px) {
     .sidebar {
         width: 100%;
@@ -303,9 +321,6 @@ pre, code, .gist {
 @media (max-width: 480px) {
     .content {
         padding: 2em 1em 0;
-    }
-    .not-mobile {
-        display: none;
     }
     .post-header-article h1 {
         font-size: 2em;

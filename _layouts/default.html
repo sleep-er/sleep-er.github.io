@@ -3,11 +3,12 @@
 {% include header.html %}
 
 <body>
+<a href="https://github.com/sleep-er/sleep-er.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
 <div class="pure-g-r" id="layout">
     <div class="sidebar pure-u-1-4">
         <header class="header">
             <div class="about pure-g-r">
-                <div class="pure-u-1-2 not-mobile">
+                <div class="pure-u-1-2 pure-hidden-phone">
                     <img class="image-me " src="/images/me-large.jpg" height="180" width="122" title="me">
                 </div>
                 <div class="contact pure-u-1-2">
@@ -31,13 +32,16 @@
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a class="pure-button {% if '/' == page.url %}pure-menu-selected {% endif %}" href="/">Home</a>
+                        <a class="pure-button {% if '/' == page.url %}pure-menu-selected {% endif %}" href="/"><i class="fa fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button {% if '/blog/' == page.url %}pure-menu-selected {% endif %}" href="/blog">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="pure-button {% if '/about/' == page.url %}pure-menu-selected {% endif %}" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="pure-button {% if '/blog/' == page.url %}pure-menu-selected {% endif %}" href="/blog">Blog</a>
+                        <a class="pure-button {% if '/contact/' == page.url %}pure-menu-selected {% endif %}" href="/contact">Contact</a>
                     </li>
                 </ul>
             </nav>

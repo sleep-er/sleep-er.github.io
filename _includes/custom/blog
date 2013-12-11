@@ -1,8 +1,3 @@
----
-permalink: /
-layout: blog
-title: "David Makin - Blog"
----
 <div id="intro">
     <h1 class="content-subhead">Blog</h1>
 </div>
@@ -38,7 +33,7 @@ title: "David Makin - Blog"
 <div class="pagination">
     {% if paginator.previous_page && 1 != paginator.previous_page %}
     {% if 1 == paginator.previous_page %}
-    <a href="/" class="previous"><i class="fa fa-arrow-left"></i> Newer</a>
+    <a href="/blog" class="previous"><i class="fa fa-arrow-left"></i> Newer</a>
     {% else %}
     <a href="/page{{ paginator.previous_page }}" class="previous"><i class="fa fa-arrow-left"></i> Newer</a>
     {% endif %}
@@ -52,4 +47,3 @@ title: "David Makin - Blog"
     <span class="next2 ">Older <i class="fa fa-arrow-right"></i></span>
     {% endif %}
 </div>
-

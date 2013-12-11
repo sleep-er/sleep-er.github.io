@@ -1,7 +1,7 @@
 auto: true
 paginate: 15
 permalink: /blog/:year/:title/
-paginate_path: "blog/page:num"
+paginate_path: "/blog/page:num"
 markdown: rdiscount
 pygments: true
 excerpt_separator: "<!-- more -->"

@@ -2,6 +2,9 @@
 title: Welcome
 layout: default
 ---
+{% if paginator.page != 1 %}
+{% include custom/blog %}
+{% else %}
 <div id="intro">
     <h1 class="content-subhead">Welcome</h1>
     Hi and welcome to my little piece of the internet.  Here I will be posting on various topics, probably covering Linux,
@@ -36,6 +39,6 @@ layout: default
 </div>
 <br>
 <a href="/blog" title="blog">Read the rest of my blog posts <i class="fa fa-chevron-circle-right"></i></a>
-
+{% endif %}
 
 
