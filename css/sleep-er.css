@@ -193,6 +193,7 @@ h5.post-title a
     border-radius: 50px;
     float: right;
     margin-left: 1em;
+    border: 3px double;
 }
 .post-description {
     color: #eeeeee;
