@@ -19,7 +19,7 @@ body,
 h1, h2, h3, h4, h5, h6 {
     font-family: "Expletus Sans", sans-serif;
     font-weight: normal;
-    color: #dddddd;
+    color: #cccccc;
 }
 h1 {
     font-size: 2.5em;
@@ -154,20 +154,23 @@ a:focus {
     border-bottom: 2px solid #ffaa00;
 }
 
+.post-description h1,
+.post-description h2,
+.post-description h3,
+.post-description h4,
+.post-description h5,
+.post-description h6 {
+    margin-top: 1.5em;
+}
+
 #disqus_thread {
     padding-top: 2em;
 }
 
 .post-description  p:first-child:first-letter {
     font-family: "Expletus Sans",sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     color: #cccccc;
-    border-radius: 5px;
-    float: left;
-    height: 64px;
-    line-height: 70px;
-    margin-right: 0px;
-    padding: 0px;
 }
 .post-header-article h1 {
     font-size: 3em;
@@ -187,7 +190,7 @@ h3.post-title a,
 h4.post-title a,
 h5.post-title a
 {
-    color: #dddddd;
+    color: #cccccc;
 }
 .post-avatar {
     border-radius: 50px;
@@ -261,9 +264,9 @@ h5.post-title a
     color: #333333;
 }
 
-pre, code, .gist {
-    font-family: Menlo,Consolas,"Courier New",Courier,"Liberation Mono",monospace;
-    font-size: 12px
+.highlight code,
+.gist {
+    color: #333333;
 }
 
 .gist table{

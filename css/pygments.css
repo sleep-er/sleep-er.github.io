@@ -2,15 +2,17 @@
     background-color: #efefef;
     padding: 7px 7px 7px 10px;
     border: 1px solid #ddd;
-    -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
-    -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
-    box-shadow: 3px 3px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 4px 4px 0px 0px rgba(255,170,0,1);
+    -moz-box-shadow: 4px 4px 0px 0px rgba(255,170,0,1);
+    box-shadow: 4px 4px 0px 0px rgba(255,170,0,1);
     margin: 20px 0 20px 0;
     overflow: hidden;
 }
 
 code {
-    font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+    font-family: Menlo,Consolas,"Courier New",Courier,"Liberation Mono",monospace;
+    font-size: 1em;
+    color: #dddddd;
 }
 
 .post-description .highlight .c { color: #586E75 } /* Comment */
