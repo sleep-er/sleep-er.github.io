@@ -4,7 +4,6 @@ title: Fracking IE8 not inheriting background correctly.
 category: Coding
 tags: IE CSS
 published: true
-summary: The CSS background element does not properly inherit if you use PIE.htc.
 ---
 <p>
 Just solved a problem which causes me to hate IE8 even more.  If you set a gradient on a section via css and <a href="http://css3pie.com/" title="PIE.htc">PIE.htc</a>
