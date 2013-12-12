@@ -13,7 +13,7 @@ body {
 body,
 .pure-g [class *= "pure-u"],
 .pure-g-r [class *= "pure-u"] {
-    font: 1em "Expletus Sans", sans-serif;
+    font-family:"Expletus Sans", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -269,11 +269,6 @@ pre, code, .gist {
     width: 100%;
 }
 
-.pagination .next,
-.pagination .previous {
-    color: #ffaa00;
-}
-
 .contact {
     transition: all 0.25s ease 0s;
 }
@@ -291,6 +286,27 @@ pre, code, .gist {
     display: inline;
     margin-left: 1em;
 }
+
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.center {
+    text-align: center;
+}
+
+
+.pure-button {
+    background-color: #ffaa00;
+    border-radius: 4px;
+    color: #333333;
+}
+.pure-button:hover {
+    color: #333333;
+}
+
 @media (max-width: 767px) {
     .sidebar {
         width: 100%;

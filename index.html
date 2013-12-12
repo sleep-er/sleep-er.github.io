@@ -1,6 +1,42 @@
 ---
-permalink: /
-layout: index
+layout: default
 title: "David Makin - home"
 ---
+<div id="intro">
+    <h1 class="content-subhead">Welcome</h1>
+    Hi and welcome to my little piece of the internet.  Here I will be posting on various topics, probably covering Linux,
+    PHP and other web technologies that happen to have piqued my interest.
+</div>
+<!-- A wrapper for all the blog posts -->
+<div class="posts">
+
+    <h1 class="content-subhead">Recent blog musings</h1>
+    <!-- This loops through the paginated posts -->
+    {% for post in site.posts limit:4 %}
+    <section class="post">
+        <header class="post-header">
+            <img width="48" height="48" src="{{ site.url }}/images/me-avatar.jpg" alt="David Makin's avatar" class="post-avatar">
+            <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+            <p class="post-meta">
+                <i class="fa fa-calendar"></i> {{ post.date | date: "%e %B %Y" }} |
+                Category: <span class="post-category post-category-design">{{ post.category }}</span> |
+                <i class="fa fa-tags"></i>
+
+                {% for tag in post.tags %}
+                <span class="post-tag post-tag-design">{{ tag }}</span>
+                {% endfor %}
+            </p>
+        </header>
+
+        <div class="post-description">
+            <p>{{ post.content | split: '<!-- more -->' | first }} <a class="more pure-button" href="{{ post.url }}">read full article <i class="fa fa-chevron-circle-right"></i></i></a></p>
+        </div>
+    </section>
+    {% endfor %}
+
+</div>
+<br>
+<a href="/blog" title="blog" class="pure-button pure-button-small float-right">Read the rest of my blog posts <i class="fa fa-chevron-circle-right"></i></a>
+
 
