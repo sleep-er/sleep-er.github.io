@@ -273,7 +273,7 @@ pre, code, .gist {
 .contact {
     transition: all 0.25s ease 0s;
 }
-.contact:hover{
+.contact a:hover{
     color: #ffaa00;
 }
 .contact .fa{
