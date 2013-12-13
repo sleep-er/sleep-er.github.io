@@ -67,7 +67,7 @@ With this command you have told it to:
 
 `--post 8080` run a web server on this port number.
 
-`--drafts` display any blog posts that might be in the _drafts folder. (slight advanced feature)
+`--drafts` display any blog posts that might be in the _drafts folder. (slightly advanced feature)
 
 You can now open your browser and go to [http://127.0.0.1:8080](http://127.0.0.1:8080). Any changes you make to your site will appear straight away.
 
