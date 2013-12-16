@@ -8,11 +8,11 @@ layout: none
         <description>{{ site.description | xml_escape }}</description>
         <link>{{ site.url }}</link>
         <image>
-            <url>{{ site.url }}/favicon.ico</url>
+            <url>{{ site.url }}/images/me-large.jpg</url>
             <title>David Makin</title>
             <link>{{ site.url }}</link>
-            <width>64</width>
-            <height>64</height>
+            <width>61</width>
+            <height>90</height>
             <description>{{ site.description | xml_escape }}</description>
         </image>
         <language>en-gb</language>
