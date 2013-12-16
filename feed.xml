@@ -15,10 +15,18 @@ layout: none
             <height>64</height>
             <description>{{ site.description | xml_escape }}</description>
         </image>
+        <language>en-gb</language>
+        <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
         <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
         {% for post in site.posts limit:20 %}
         <item>
             <title>{{ post.title | xml_escape }}</title>
+            <author>David Makin</author>
+            <category><![CDATA[ {{ post.category }}]]></category>
+            {% for tag in post.tags %}
+            <category>{{ tag }}</category>
+            {% endfor %}
             <description>{{ post.content | xml_escape }}</description>
             <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
             <link>{{ site.url }}/{{ post.url }}</link>
