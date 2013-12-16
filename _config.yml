@@ -4,3 +4,5 @@ permalink: /blog/:year/:title/
 markdown: rdiscount
 pygments: true
 excerpt_separator: "<!-- more -->"
+name: David Makin
+description: Personal blog about various tech.  PHP, bash, Linux related.
