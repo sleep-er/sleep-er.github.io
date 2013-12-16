@@ -7,6 +7,14 @@ layout: none
         <title>{{ site.name  }}</title>
         <description>{{ site.description | xml_escape }}</description>
         <link>{{ site.url }}</link>
+        <image>
+            <url>{{ site.url }}/favicon.ico</url>
+            <title>David Makin</title>
+            <link>{{ site.url }}</link>
+            <width>64</width>
+            <height>64</height>
+            <description>{{ site.description | xml_escape }}</description>
+        </image>
         <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
         {% for post in site.posts limit:20 %}
         <item>
