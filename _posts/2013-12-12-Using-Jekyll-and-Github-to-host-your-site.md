@@ -59,14 +59,10 @@ In that case, as long as you have install Jekyll, you don't have to.  Just run t
 jekyll serve --watch  --host 127.0.0.1 --port 8080 --drafts
 {% endhighlight %}
 
-With this command you have told it to:
-
-`--watch` watch the code and generate new pages when it alters.
-
-`--host 127.0.0.1` run a web server on this host.
-
-`--post 8080` run a web server on this port number.
-
+With this command you have told it to:  
+`--watch` watch the code and generate new pages when it alters.  
+`--host 127.0.0.1` run a web server on this host.  
+`--post 8080` run a web server on this port number.  
 `--drafts` display any blog posts that might be in the _drafts folder. (slightly advanced feature)
 
 You can now open your browser and go to [http://127.0.0.1:8080](http://127.0.0.1:8080). Any changes you make to your site will appear straight away.
