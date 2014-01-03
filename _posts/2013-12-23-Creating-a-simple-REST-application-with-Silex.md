@@ -73,13 +73,13 @@ $app = new Silex\Application();
 $app['debug'] = true;
 
 $toys = array(
-    array(
+    '00001'=> array(
         'name' => 'Racing Car',
         'quantity' => '53',
         'description' => '...',
         'image' => 'racing_car.jpg',
     ),
-    array(
+    '00002' => array(
         'name' => 'Raspberry Pi',
         'quantity' => '13',
         'description' => '...',
@@ -122,9 +122,9 @@ As well as `use ($toys)` we are passing in a couple of variables to the function
 
 ## View your routes.
 Once you have setup your webserver of choice to [route everything via index.php](http://silex.sensiolabs.org/doc/web_servers.html) you can browse to
-your routes at `http://toyshop/` & `http://toyshop/1` and see the toys.  
+your routes at `http://toyshop/` & `http://toyshop/00001` and see the toys.  
 
-`http://toyshop/1` will display 
+`http://toyshop/00001` will display 
 {% highlight json %}
 {"name":"Raspberry Pi","quantity":"13","description":"...","image":"raspberry_pi.jpg"}
 {% endhighlight %}

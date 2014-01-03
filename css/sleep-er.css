@@ -167,6 +167,9 @@ a:focus {
     padding-top: 2em;
 }
 
+.post-description .more {
+    color: #ffaa00;
+}
 .post-description  p:first-child:first-letter {
     font-family: "Expletus Sans",sans-serif;
     font-size: 1.5em;
