@@ -39,18 +39,25 @@ $app->post('/', function (Silex\Application $app, Symfony\Component\HttpFoundati
     );
     
     // Useful to return the newly added details
-    return json_encode($toy);
+    return new Symfony\Component\HttpFoundation\Response(json_encode($toy), 201);
 });
 {% endhighlight %}
-
-You might have noticed that we now have 2 URL in the application that are the same `/` but actually they are not.  One uses the GET verb and one the POST.
-As long as you make a POST request it will try to add a new item and if you make a GET request it will display all the items.
 
 ## Adding a DELETE
 add DELETE /{stockid}
 
 ## Other routes
 explain other verbs
+
+## The same route but different verbs
+You might have noticed that we now have 2 URLs in the application that are the same `/` but actually they are not.  One uses the GET verb and one the POST.
+How does it know which to use? Well that depends on the request type it receives and explaining how to send POST, DELETE, PUT etc is a big post in itself. 
+For simple testing of routes you can use [RESTClient](http://www.restclient.net) for Firefox or [Postman](http://www.getpostman.com/) for Chrome.  If you want to 
+consume a route in your client code you can use plain old php fopen, curl or the nice [Guzzle library](http://guzzlephp.org/). 
+
+## Part 3
+Now that we have several routes in `index.php` it is starting to look messy and you should be able to see that adding everything into 1 file will
+ cause us headaches down the road in terms of readability and maintainability.  Let us look at moving these into separate libraries.
 
 ## Links
 Creating a simple REST application with Silex  

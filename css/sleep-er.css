@@ -19,7 +19,7 @@ body,
 h1, h2, h3, h4, h5, h6 {
     font-family: "Expletus Sans", sans-serif;
     font-weight: normal;
-    color: #cccccc;
+    color: #ececec;
 }
 h1 {
     font-size: 2.5em;
@@ -161,8 +161,8 @@ a:focus {
 .post-description h5,
 .post-description h6 {
     margin-top: 1.5em;
+    font-weight: bold;
 }
-
 #disqus_thread {
     padding-top: 2em;
 }
@@ -203,7 +203,7 @@ h5.post-title a
 }
 .post-description {
     color: #eeeeee;
-    line-height: 1.1em;
+    line-height: 1.3em;
 }
 .post-meta {
     color: #999;
