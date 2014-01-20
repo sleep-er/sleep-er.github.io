@@ -39,12 +39,25 @@ $app->post('/', function (Silex\Application $app, Symfony\Component\HttpFoundati
     );
     
     // Useful to return the newly added details
-    return new Symfony\Component\HttpFoundation\Response(json_encode($toy), 201);
+    // HTTP_CREATED = 200
+    return new Symfony\Component\HttpFoundation\Response(json_encode($toy), HTTP_CREATED);
 });
 {% endhighlight %}
 
-## Adding a DELETE
-add DELETE /{stockid}
+## Deleting an item of stock
+
+At some point we will want to delete items.  
+{% highlight php linenos %}
+<?php
+$app->delete('/{toy_id}', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request, $toy_id) {
+    
+    // Perform your SQL command to delete the toy_id from the database
+    // $sql = "DELETE FROM toys WHERE id='{$toy_id}'";
+    
+    // HTTP_NO_CONTENT = 204
+    return new Symfony\Component\HttpFoundation\Response('', HTTP_NO_CONTENT);
+});
+{% endhighlight %}
 
 ## Other routes
 explain other verbs
@@ -57,10 +70,13 @@ consume a route in your client code you can use plain old php fopen, curl or the
 
 ## Part 3
 Now that we have several routes in `index.php` it is starting to look messy and you should be able to see that adding everything into 1 file will
- cause us headaches down the road in terms of readability and maintainability.  Let us look at moving these into separate libraries.
+ cause us headaches down the road in terms of readability and maintainability.  Part 3 will look at moving these into separate libraries.
 
 ## Links
 Creating a simple REST application with Silex  
-[part 1]({% post_url 2013-12-23-Creating-a-simple-REST-application-with-Silex %})
+[part 1]({% post_url 2013-12-23-Creating-a-simple-REST-application-with-Silex %})  
 
+[RESTClient](http://www.restclient.net)  
+[Postman](http://www.getpostman.com/)  
+[Guzzle library](http://guzzlephp.org/)  
 
