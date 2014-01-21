@@ -2,7 +2,7 @@
 layout: post
 title: Joining PDF files together
 category: Linux
-tags: Ubuntu, PDF
+tags: Ubuntu PDF
 published: true
 ---
 <p>
