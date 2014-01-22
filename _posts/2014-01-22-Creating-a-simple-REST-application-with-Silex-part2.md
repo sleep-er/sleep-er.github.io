@@ -46,26 +46,44 @@ $app->post('/', function (Silex\Application $app, Symfony\Component\HttpFoundati
 
 ## Deleting an item of stock
 
-At some point we will want to delete items.  
+At some point we will want to delete items.  For that you need a `DELETE` route
 {% highlight php linenos %}
 <?php
 $app->delete('/{toy_id}', function (Silex\Application $app, Symfony\Component\HttpFoundation\Request $request, $toy_id) {
     
-    // Perform your SQL command to delete the toy_id from the database
-    // $sql = "DELETE FROM toys WHERE id='{$toy_id}'";
+    if (delete_toy($toy_id)) {
+        // The delete went ok and we can now return a no content value
+        // HTTP_NO_CONTENT = 204
+        $responseMessage = '';
+        $responseCode = Symfony\Component\HttpFoundation\Response::HTTP_NO_CONTENT;
+    } else {
+        // Something went wrong
+        $responseMessage = 'reason for error';
+        $response_code = Symfony\Component\HttpFoundation\Response::HTTP_INTERNAL_SERVER_ERROR;
+    }
     
-    // HTTP_NO_CONTENT = 204
-    return new Symfony\Component\HttpFoundation\Response('', HTTP_NO_CONTENT);
+    return new Symfony\Component\HttpFoundation\Response($responseMessage, $responseCode);
 });
 {% endhighlight %}
 
-## Other routes
-explain other verbs
-
 ## The same route but different verbs
-You might have noticed that we now have 2 URLs in the application that are the same `/` but actually they are not.  One uses the GET verb and one the POST.
-How does it know which to use? Well that depends on the request type it receives and explaining how to send POST, DELETE, PUT etc is a big post in itself. 
-For simple testing of routes you can use [RESTClient](http://www.restclient.net) for Firefox or [Postman](http://www.getpostman.com/) for Chrome.  If you want to 
+You might have noticed that we now have multiple URLs in the application that are the same, `/`.  Acutally they are not, one uses the GET verb, one the POST and one DELETE.
+How does it know which to use? Well that depends on the request type it receives and explaining how to send POST, DELETE, PUT etc is a big post in itself.  Have a 
+read of [REST API Tutorial](http://www.restapitutorial.com/lessons/httpmethods.html) to learn which verb to use in which situation.
+
+## How do I test these routes
+For GET you can simply browse to it in your webclient of choice but the others are a little more difficult.  
+
+If you you are comfortable with the command line you can use curl.  Something like this should do
+{% highlight bash %}
+curl -i -H "Accept: application/json" -X DELETE http://127.0.0.1/00002
+{% endhighlight %}
+Where:  
+`-i` show response headers  
+`-H` pass request headers to the resource  
+`-X` pass a HTTP method name  
+
+A much nicer way if to use a REST client, PHPStorm has one builtin or you can get a browser addon, [RESTClient](http://www.restclient.net) for Firefox or [Postman](http://www.getpostman.com/) for Chrome.  If you want to 
 consume a route in your client code you can use plain old php fopen, curl or the nice [Guzzle library](http://guzzlephp.org/). 
 
 ## Part 3
@@ -76,6 +94,7 @@ Now that we have several routes in `index.php` it is starting to look messy and 
 Creating a simple REST application with Silex  
 [part 1]({% post_url 2013-12-23-Creating-a-simple-REST-application-with-Silex %})  
 
+[REST API Tutorial](http://www.restapitutorial.com/)
 [RESTClient](http://www.restclient.net)  
 [Postman](http://www.getpostman.com/)  
 [Guzzle library](http://guzzlephp.org/)  
