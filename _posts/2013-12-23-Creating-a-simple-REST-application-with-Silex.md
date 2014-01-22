@@ -137,4 +137,4 @@ of working on me and it just happens to be what I am currently using.
 If you wanted you could use [Slim](http://www.slimframework.com "Slim Framework"), any other micro-framework or even a full fat framework like
 [Symfony](http://symfony.com/) or [Zend](http://framework.zend.com).
 
-
+[part 2]({% post_url 2014-01-22-Creating-a-simple-REST-application-with-Silex-part2 %})  
