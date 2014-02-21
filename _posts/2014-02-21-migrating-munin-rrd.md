@@ -68,7 +68,6 @@ using 'rrdtool' export it as xml into '/tmp/rrd_dump/directoryname/filename.rrd'
 I have skipped a stage here, the one where you copy the /tmp/rrd_dump directory onto your new machine.  I am sure you can do this without my help.  
 
 Now we will do the same as before but in reverse. In your 'rrd_dump' directory create a files named 'rrdrestore.sh'
-for i in ./*.xml; do rrdtool restore "$i" "../senpuu/${i%.xml}"; done
 {% highlight bash %}
 #!/usr/bin/env bash
 
