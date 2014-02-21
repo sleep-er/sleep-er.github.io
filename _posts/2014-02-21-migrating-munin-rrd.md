@@ -72,17 +72,18 @@ Now we will do the same as before but in reverse. In your `rrd_dump` directory c
 #!/usr/bin/env bash
 
 restore () {
-	for i in $1/*.rrd;do 
-		rrdtool restore "$i" "/var/lib/munin/${i%.xml}";
-	done
+    for i in $1/*.xml;do 
+	mkdir -p "/var/lib/munin/${i%.rrd.xml}";
+        rrdtool restore "$i" "/var/lib/munin/${i%.xml}";
+    done
 }
 # delegate to subprogram
 if [ "$1" = "-restore" ]; then
-	shift 1
-	restore "$@"
-	exit $?
+    shift 1
+    restore "$@"
+    exit $?
 fi
-find * -type d | xargs mkdir -p /var/lib/munin/
+#find * -type d | xargs mkdir -p /var/lib/munin/
 find * -type d | xargs -P 2 -I % $SHELL "$0" -restore %
 {% endhighlight %}
 
