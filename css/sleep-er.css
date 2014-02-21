@@ -318,6 +318,11 @@ h5.post-title a
     line-height: 1em;
 }
 
+.highlight pre {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
 @media (max-width: 767px) {
     .sidebar {
         width: 100%;
