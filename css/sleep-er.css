@@ -305,7 +305,6 @@ h5.post-title a
     text-align: center;
 }
 
-
 .pure-button {
     background-color: #ffaa00;
     border-radius: 4px;
@@ -313,6 +312,10 @@ h5.post-title a
 }
 .pure-button:hover {
     color: #333333;
+}
+
+.highlight {
+    line-height: 1em;
 }
 
 @media (max-width: 767px) {
