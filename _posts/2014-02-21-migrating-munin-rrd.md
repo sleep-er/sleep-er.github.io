@@ -35,14 +35,14 @@ if [ "$1" = "-foo" ]; then
 	foo "$@"
 	exit $?
 fi
-find * -type d | xargs mkdir -p
+find * -type d | xargs mkdir -p /tmp/rrd_dump
 find * -type d | xargs -P 2 -I % $SHELL "$0" -foo %
 {% endhighlight %}
 
 It's a little rough and ready but it does the job.  Lets explain what it does.  
 
 {% highlight bash %}
-find * -type d | xargs mkdir -p
+find * -type d | xargs mkdir -p /tmp/rrd_dump
 {% endhighlight %}
 First it finds all the directories from where you run it, I am assuming it will be run from 'var/lib/munin', 
 then it creates a matching layout in '/tmp/rrd_dump'
@@ -67,3 +67,25 @@ using 'rrdtool' export it as xml into '/tmp/rrd_dump/directoryname/filename.rrd'
 
 I have skipped a stage here, the one where you copy the /tmp/rrd_dump directory onto your new machine.  I am sure you can do this without my help.  
 
+Now we will do the same as before but in reverse. In your 'rrd_dump' directory create a files named 'rrdrestore.sh'
+for i in ./*.xml; do rrdtool restore "$i" "../senpuu/${i%.xml}"; done
+{% highlight bash %}
+#!/usr/bin/env bash
+
+restore () {
+	for i in $1/*.rrd;do 
+		rrdtool restore "$i" "/var/lib/munin/${i%.xml}";
+	done
+}
+# delegate to subprogram
+if [ "$1" = "-restore" ]; then
+	shift 1
+	restore "$@"
+	exit $?
+fi
+find * -type d | xargs mkdir -p /var/lib/munin/
+find * -type d | xargs -P 2 -I % $SHELL "$0" -restore %
+{% endhighlight %}
+
+You might have to tweak the file permissions once you have finished but all you historical data should
+now have been transferred onto your new system.
