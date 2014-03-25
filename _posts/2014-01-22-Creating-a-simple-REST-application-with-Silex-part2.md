@@ -90,8 +90,10 @@ consume a route in your client code you can use plain old php fopen, curl or the
 Now that we have several routes in `index.php` it is starting to look messy and you should be able to see that adding everything into 1 file will
  cause us headaches down the road in terms of readability and maintainability.  Part 3 will look at moving these into separate libraries.
 
+## Links
 [part 1]({% post_url 2013-12-23-Creating-a-simple-REST-application-with-Silex %})  
-
+[part 3]({% post_url 2014-03-25-Creating-a-simple-REST-application-with-Silex-part3 %})  
+  
 [REST API Tutorial](http://www.restapitutorial.com/)
 [RESTClient](http://www.restclient.net)  
 [Postman](http://www.getpostman.com/)  

@@ -24,15 +24,15 @@ There are multiple ways to install [Silex](http://silex.sensiolabs.org/ "Silex")
 Inside your working directory run the command
 {% highlight bash %}composer require silex/silex ~1.1{% endhighlight %}
 
-With this command you have told it to:  
-`require` adds a new package to the project  
-`silex/silex` the name of the package in the format vendor/package  
-`~1.1` the version of the package, ~1.1 means `>=1.1, <2.0`  
+With this command you have told it to:
+`require` adds a new package to the project
+`silex/silex` the name of the package in the format vendor/package
+`~1.1` the version of the package, ~1.1 means `>=1.1, <2.0`
 
 As this is running you will see that it goes off and installs libraries you didn't request, don't worry this is meant to happen as Silex
  relies upon them to run.
 
-Once it is finished you will have a file structure like this.  
+Once it is finished you will have a file structure like this.
 {% highlight bash %}toyshop/
        composer.json
        composer.lock
@@ -56,11 +56,11 @@ Lets have a look at `composer.json`, it should look something like this
 This file contains a list of every single package installed as well as the version.  This is useful as it means you don't need to commit the `vendor/`
 folder into VCS.
 
-As long as you check in `composer.json` and `composer.lock` into your VCS of choice as once the code is checked out you can just run 
+As long as you check in `composer.json` and `composer.lock` into your VCS of choice as once the code is checked out you can just run
 `composer install` and it will download the exact have versions you currently have installed.
 
-## Creating our first Routes 
-As this example is a toyshop let us think what it will need.  People browsing our site will want to see the presents so lets create a route to 
+## Creating our first Routes
+As this example is a toyshop let us think what it will need.  People browsing our site will want to see the presents so lets create a route to
 do just that.
 
 Let us create the file `index.php` and it should look like this
@@ -106,25 +106,25 @@ $app->run();
 There are 2 routes in this `/` and `/{stockcode}`
 
 ### Route `/`
-This route is designed so you can GET all the toys.  All it does is encode them as JSON and return that to the requester. 
+This route is designed so you can GET all the toys.  All it does is encode them as JSON and return that to the requester.
 
 To allow the anonymous function to access the `$toys` array we need to import it by adding `use ($toys)` at the end of the definition
-but before the opening `{`.  
+but before the opening `{`.
 
 ### Route `/{stockcode}`
 This will GET the information about a particular toy as passed in via the `stockcode` parameter.  As you can see it has a slightly more complicated
 function header to accommodate this.
 
-As well as `use ($toys)` we are passing in a couple of variables to the function itself `Silex\Application $app` & `$stockcode`.  
+As well as `use ($toys)` we are passing in a couple of variables to the function itself `Silex\Application $app` & `$stockcode`.
 
-`Silex\Application $app` is the Silex application and helps us provide a nice 404 page if an invalid stockcode is provided.  
+`Silex\Application $app` is the Silex application and helps us provide a nice 404 page if an invalid stockcode is provided.
 `$stockcode` is the Id of the toy we are interested in.  As you can see it matches `{stockcode}` in the route.
 
 ## View your routes.
 Once you have setup your webserver of choice to [route everything via index.php](http://silex.sensiolabs.org/doc/web_servers.html) you can browse to
-your routes at `http://toyshop/` & `http://toyshop/00001` and see the toys.  
+your routes at `http://toyshop/` & `http://toyshop/00001` and see the toys.
 
-`http://toyshop/00001` will display 
+`http://toyshop/00001` will display
 {% highlight json %}
 {"name":"Raspberry Pi","quantity":"13","description":"...","image":"raspberry_pi.jpg"}
 {% endhighlight %}
@@ -137,4 +137,6 @@ of working on me and it just happens to be what I am currently using.
 If you wanted you could use [Slim](http://www.slimframework.com "Slim Framework"), any other micro-framework or even a full fat framework like
 [Symfony](http://symfony.com/) or [Zend](http://framework.zend.com).
 
+## Links
 [part 2]({% post_url 2014-01-22-Creating-a-simple-REST-application-with-Silex-part2 %})  
+[part 3]({% post_url 2014-03-25-Creating-a-simple-REST-application-with-Silex-part3 %})  
