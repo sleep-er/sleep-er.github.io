@@ -2,7 +2,7 @@ paginate: 5
 paginate_path: "/blog/page:num"
 permalink: /blog/:year/:title/
 markdown: kramdown
-pygments: true
+highlighter: rouge
 excerpt_separator: "<!-- more -->"
 name: David Makin
 description: Personal blog about various tech.  PHP, bash, Linux related.
