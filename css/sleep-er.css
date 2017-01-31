@@ -80,6 +80,10 @@ a:focus {
 
 .sidebar .about {
     margin-bottom: 2em;
+
+    @media screen and (max-width:767px) {
+        margin-bottom: 0;
+    }
 }
 
 .sidebar .contact {
