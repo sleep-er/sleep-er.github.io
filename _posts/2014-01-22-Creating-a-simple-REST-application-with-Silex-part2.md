@@ -3,7 +3,7 @@ layout: post
 title: Creating a simple REST application with Silex part 2.
 category: Coding
 tags: Silex REST PHP
-image: /images/blog/silex.png
+image: silex.png
 ---
 In [part 1]({% post_url 2013-12-23-Creating-a-simple-REST-application-with-Silex %}) you installed Silex and setup 2 routes, `/` and `/{stockcode}`.
 Now lets expand upon those by adding a POST and a DELETE route. 

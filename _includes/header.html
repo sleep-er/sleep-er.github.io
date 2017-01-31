@@ -16,8 +16,15 @@
     <link rel="author" href="https://plus.google.com/+DavidMakin/posts">
     <link rel="canonical" href="{{ site.url }}" />
     <!-- styles -->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+    <!--<![endif]-->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
     <link rel="stylesheet" href="{{ site.url }}/css/sleep-er.css">
     <link rel="stylesheet" href="{{ site.url }}/css/pygments.css">
 
@@ -25,4 +32,27 @@
     <script type="text/javascript" src="{{site.url }}/js/sleep-er.js"></script>
 
     <link rel="shortcut icon" href="/favicon.ico">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@pwnedsleeper">
+    <meta name="twitter:creator" content="@pwnedsleeper">
+    {% if page.title %}
+    <meta name="twitter:title" content="{{ page.title }}">
+    {% else %}
+    <meta name="twitter:title" content="{{ site.title }}">
+    {% endif %}
+    {% if page.url %}
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    {% endif %}
+    {% if page.description %}
+    <meta name="twitter:description" content="{{ page.description }}">
+    {% else %}
+    <meta name="twitter:description" content="{{ site.description }}">
+    {% endif %}
+    {% if page.image %}
+    <meta name="twitter:image:src" content="{{ site.url }}/images/blog/{{ page.image }}">
+    {% else %}
+    <meta name="twitter:image:src" content="{{ site.url }}/images/me-large.jpg">
+    {% endif %}
+
 </head>

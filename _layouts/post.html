@@ -16,6 +16,12 @@ layout: default
         </p>
     </header>
 
+    {% if page.image %}
+    <div class="post-image pure-g">
+        <div class="pure-u-1"><img class="pure-img" src="/images/blog/{{ page.image }}"></div>
+    </div>
+    {% endif %}
+
     <div class="post-description">
         {{ content }}
     </div>
