@@ -3,8 +3,8 @@
 {% include header.html %}
 
 <body>
-<div class="pure-g-r" id="layout">
-    <div class="sidebar pure-u-1-4">
+<div class="pure-g" id="layout">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
         <header class="header">
             <div class="about pure-g-r">
                 <div class="pure-u-1-2 pure-hidden-phone">
@@ -41,16 +41,11 @@
         </header>
     </div>
 
-    <div class="pure-u-3-4">
-
-        <div class="content">
-
+    <div class="content pure-u-1 pure-u-md-3-4">
             {{ content }}
 
             <br />
             <!--{% include footer.html %}-->
-
-        </div>
     </div>
 </div>
 
