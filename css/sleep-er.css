@@ -334,6 +334,10 @@ h5.post-title a
     margin-bottom: 5px;
 }
 
+.sidebar-advert {
+    margin-top: 20px;
+}
+
 @media (max-width: 767px) {
     .sidebar {
         width: 100%;
