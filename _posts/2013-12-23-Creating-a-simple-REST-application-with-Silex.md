@@ -1,9 +1,14 @@
 ---
-layout: post
 title: Creating a simple REST application with Silex.
-category: Coding
-tags: Silex REST PHP
-image: /images/blog/silex.png
+date: 2013-12-23 00:00:00 Z
+categories:
+- Coding
+tags:
+- Silex
+- REST
+- PHP
+layout: post
+image: "/images/blog/silex.png"
 ---
 
 So you have come to the conclusion that, rather than having the code to update customer details and that little fix to convert the date

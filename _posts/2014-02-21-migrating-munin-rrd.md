@@ -1,10 +1,14 @@
 ---
-layout: post
 title: Migrating Munin RRD files to a different machine
-category: Linux
-tags: Munin RRD
-published: true
+date: 2014-02-21 00:00:00 Z
+categories:
+- Linux
+tags:
+- Munin
+- RRD
+layout: post
 ---
+
 Have you tried moving your Munin rrd files to a new machine and ended up with this error
 
 {% highlight bash %}

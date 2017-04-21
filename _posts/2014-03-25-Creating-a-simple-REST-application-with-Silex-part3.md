@@ -1,10 +1,16 @@
 ---
-layout: post
 title: Creating a simple REST application with Silex part 3.
-category: Coding
-tags: Silex REST PHP
+date: 2014-03-25 00:00:00 Z
+categories:
+- Coding
+tags:
+- Silex
+- REST
+- PHP
+layout: post
 image: silex.png
 ---
+
 In [part 1]({% post_url 2013-12-23-Creating-a-simple-REST-application-with-Silex %}) you installed Silex and setup 2 routes, `/` and `/{stockcode}`.
 In [part 2]({% post_url 2014-01-22-Creating-a-simple-REST-application-with-Silex-part2 %}) you added a POST and a DELETE route.  In part 3 we are going to
 assume a few months have passed and you now have tens, maybe hundreds, of routes.

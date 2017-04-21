@@ -1,10 +1,15 @@
 ---
+title: Running Composer via Phing via Composer
+date: 2014-01-31 00:00:00 Z
+categories:
+- CI
+tags:
+- Composer
+- Phing
+- Jenkins
 layout: post
-title: Running Composer via Phing via Composer 
-category: CI
-tags: Composer Phing Jenkins
-published: true
---- 
+---
+
 I have set up [Jenkins](http://jenkins-ci.org/) to run a [Phing](http://www.phing.info/) task every time we commit to our repo, php-lint,
 documentor, mess detector and a few other.  This is working perfectly but I wanted to expand it to perform `composer install`.  Now Phing can 
 do this via [ComposerTask](http://www.phing.info/docs/guide/stable-legacy/chapters/appendixes/AppendixC-OptionalTasks.html#ComposerTask) but 

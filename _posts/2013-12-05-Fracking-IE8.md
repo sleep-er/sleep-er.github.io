@@ -1,10 +1,14 @@
 ---
-layout: post
 title: Fracking IE8 not inheriting background correctly.
-category: Coding
-tags: IE CSS
-published: true
+date: 2013-12-05 00:00:00 Z
+categories:
+- Coding
+tags:
+- IE
+- CSS
+layout: post
 ---
+
 Just solved a problem which causes me to hate IE8 even more.  If you set a gradient on a section via css and <a href="http://css3pie.com/" title="PIE.htc">PIE.htc</a>
  and later on override it to be a solid color it doesn't work.
 <!-- more -->

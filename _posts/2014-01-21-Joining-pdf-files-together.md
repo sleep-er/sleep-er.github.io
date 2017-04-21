@@ -1,10 +1,14 @@
 ---
-layout: post
 title: Joining PDF files together
-category: Linux
-tags: Ubuntu PDF
-published: true
+date: 2014-01-21 00:00:00 Z
+categories:
+- Linux
+tags:
+- Ubuntu
+- PDF
+layout: post
 ---
+
 <p>
 So you wish to join 2 or more PDF files into one.  If you have `poppler` installed all you need to do is
 

@@ -1,10 +1,13 @@
 ---
-layout: post
 title: Removing old linux kernels in Ubuntu.
-category: Linux
-tags: Ubuntu
-published: true
+date: 2013-12-09 00:00:00 Z
+categories:
+- Linux
+tags:
+- Ubuntu
+layout: post
 ---
+
 <p>
 As I always forget how to remove the older kernel headers I am posting this here
 

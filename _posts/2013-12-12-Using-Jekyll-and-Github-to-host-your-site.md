@@ -1,8 +1,12 @@
 ---
-layout: post
 title: Hosting your site on GitHub using Jekyll.
-category: Coding
-tags: GitHub jekyll
+date: 2013-12-12 00:00:00 Z
+categories:
+- Coding
+tags:
+- GitHub
+- jekyll
+layout: post
 ---
 
 I kept seeing posts about Jekyll and how it would create static websites from plain text and you can even add in a little code to help out.
